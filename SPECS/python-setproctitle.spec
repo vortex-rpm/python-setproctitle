@@ -14,7 +14,6 @@ URL:            http://code.google.com/p/py-setproctitle
 Source0:        http://pypi.python.org/packages/source/s/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-BuildArch:      noarch
 BuildRequires:  python-setuptools, python-devel
 
 %description
@@ -35,8 +34,6 @@ the OpenSSH Server for example.
 %install
 %{__rm} -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
-mkdir -p %{buildroot}/usr/lib/python2.6
-mv %{buildroot}/usr/lib64/python2.6/site-packages %{buildroot}/usr/lib/python2.6
 
 %clean
 %{__rm} -rf %{buildroot}
