@@ -41,7 +41,7 @@ the OpenSSH Server for example.
 
 %files
 %defattr(-,root,root,-)
-%doc README.md LICENSE
+%doc README.rst COPYRIGHT
 %{python_sitelib}/%{srcname}*
 
 %changelog
