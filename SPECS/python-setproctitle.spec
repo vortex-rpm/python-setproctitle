@@ -34,6 +34,7 @@ the OpenSSH Server for example.
 %install
 %{__rm} -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
+rm -rf %{buildroot}/src
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -41,7 +42,7 @@ the OpenSSH Server for example.
 %files
 %defattr(-,root,root,-)
 %doc README.rst COPYRIGHT
-%{python_sitelib}/%{srcname}*
+%{_libdir}/python%{python_version}
 
 %changelog
 * Thu Feb 28 2013 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - 1.1.7-1.vortex
