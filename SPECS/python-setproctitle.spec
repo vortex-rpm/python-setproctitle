@@ -15,7 +15,7 @@ Source0:        http://pypi.python.org/packages/source/s/%{srcname}/%{srcname}-%
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
-BuildRequires:  python-setuptools
+BuildRequires:  python-setuptools, python-devel
 
 %description
 The library allows a process to change its title (as displayed by system tools
