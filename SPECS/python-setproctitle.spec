@@ -35,6 +35,7 @@ the OpenSSH Server for example.
 %install
 %{__rm} -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
+mkdir -p %{buildroot}/usr/lib/python2.6
 mv %{buildroot}/usr/lib64/python2.6/site-packages %{buildroot}/usr/lib/python2.6
 
 %clean
